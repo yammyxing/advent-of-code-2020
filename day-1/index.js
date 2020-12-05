@@ -37,7 +37,7 @@ function collectInputData() {
  */
 function find2020WithTwo(list, target = 2020) {
 	for (let i = 0; i < list.length; i++) {
-		for (let j = 1; j < list.length; j++) {
+		for (let j = i+1; j < list.length; j++) {
 			const frontOne = list[i];
 			const latterOne = list[j];
 			if (frontOne + latterOne === target) {
@@ -55,8 +55,8 @@ function find2020WithTwo(list, target = 2020) {
  */
 function find2020WithThree(list, target = 2020) {
 	for (let i = 0; i < list.length; i++) {
-		for (let j = 1; j < list.length; j++) {
-			for (let k = 0; k < list.length; k++) {
+		for (let j = i+1; j < list.length; j++) {
+			for (let k = i+2; k < list.length; k++) {
 				const firstOne = list[i];
 				const secondOne = list[j];
 				const thirdOne = list[k];
