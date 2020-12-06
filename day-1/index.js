@@ -2,17 +2,7 @@
  * @description Day 1: Report Repair
  */
 
-const fs = require("fs");
-
-/**
- * @description createLineReader
- * @param {String} filePath
- */
-function createLineReader(filePath = "./input.md") {
-	return require("readline").createInterface({
-		input: fs.createReadStream(filePath),
-	})
-}
+const { createLineReader } = require("../helper");
 
 /**
  * @description collect data from markdown file
